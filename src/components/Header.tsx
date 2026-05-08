@@ -1,14 +1,37 @@
 ﻿import {Link} from "react-router-dom";
 
+type LinkProps = {
+  path: string,
+  name: string
+}
+
+const LINKS: LinkProps[] = [
+  {
+    path: `/`,
+    name: `Home`,
+  },
+  {
+    path: `/gen/license`,
+    name: `License`,
+  },
+  {
+    path: `/gen/code_of_conduct`,
+    name: `Code of conduct`,
+  },
+]
 
 const Header = () => {
   return (
-    <>
-      <Link to={'/'}><p>Home</p></Link>
-      <Link to={'/code_of_conduct'}><p>Code of conduct</p></Link>
-      <Link to={'/license'}><p>License</p></Link>
-    </>
-  )
-}
+    <aside className="fixed right-0 top-0 h-screen w-64 border-l bg-white p-6 flex flex-col gap-4">
+      <h2 className="text-lg font-bold">Navigation</h2>
+
+      <nav className="flex flex-col gap-3 text-sm">
+        {LINKS.map((link) => (
+          <Link key={link.path} to={link.path} className="hover:bg-gray-100 px-3 py-2 rounded-md transition">{link.name}</Link>
+        ))}
+      </nav>
+    </aside>
+  );
+};
 
 export default Header
