@@ -6,6 +6,7 @@ import GnuGpl3 from "../utils/licenses/GnuGpl3";
 import Checkbox from "../components/Checkbox.tsx";
 import Label from "../components/Label.tsx";
 import CopyButton from "../components/CopyButton.tsx";
+import DownloadButton from "../components/DownloadButton.tsx";
 
 type LicenseData = {
   year: string;
@@ -76,9 +77,14 @@ const License = () => {
       </div>
 
       <div className="grid gap-4">
-        <Label name="Year" holder="Year" getter={() => year} setter={setYear}/>
-        <Label name="Copyright author" holder="Author" getter={() => author} setter={setAuthor}/>
-        <CopyButton content={licenseText}/>
+        <div className="grid grid-rows-1 grid-cols-2 gap-1">
+          <Label name="Year" holder="Year" getter={() => year} setter={setYear}/>
+          <Label name="Copyright author" holder="Author" getter={() => author} setter={setAuthor}/>
+        </div>
+        <div className="flex flex-row gap-1">
+          <CopyButton content={licenseText}/>
+          <DownloadButton name={"LICENSE"} extension={""} content_in_file={licenseText}/>
+        </div>
       </div>
 
       <pre className="whitespace-pre-wrap bg-gray-100 p-4 rounded-md border">

@@ -18,6 +18,10 @@ const LINKS: LinkProps[] = [
     path: `/gen/code_of_conduct`,
     name: `Code of conduct`,
   },
+  {
+    path: `/gen/funding`,
+    name: `Funding`,
+  },
 ]
 
 const Header = () => {

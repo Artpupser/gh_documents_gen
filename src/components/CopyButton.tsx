@@ -1,4 +1,5 @@
 ﻿import {useState} from "react";
+import Button from "./Button.tsx";
 
 const CopyButton = (props: {
   content: string;
@@ -8,19 +9,17 @@ const CopyButton = (props: {
     try {
       await navigator.clipboard.writeText(props.content);
       setCopied(true);
-      setTimeout(() => setCopied(false), 1500);
+      setTimeout(() => setCopied(false), 3 * 1000);
     } catch (e) {
       console.error(e);
     }
   }
 
-  return(
-    <button
-      onClick={copy}
-      className="bg-black text-white px-4 py-2 rounded-md w-fit"
-    >
-      {copied ? "Скопировано" : "Скопировать Code of Conduct"}
-    </button>
+  return (
+    <Button onclick={copy} state={() => {
+      return copied
+        ? "Скопировано! ✅"
+        : "Скопировать Code of Conduct"}}/>
   )
 }
 
