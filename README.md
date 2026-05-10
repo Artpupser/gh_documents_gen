@@ -1,6 +1,6 @@
 ﻿<div align="center">
 
-# 🧙‍♂️ gh_document_gen
+# 🧙‍♂️ gh_documents_gen
 
 ![React](https://img.shields.io/badge/react-black?style=for-the-badge&logo=react&logoColor=white)
 ![Typescript](https://img.shields.io/badge/typescript-black?style=for-the-badge&logo=typescript&logoColor=white)
@@ -14,9 +14,9 @@
 <!-- ![.Version](https://img.shields.io/github/v/release/Artpupser/PassGen?style=for-the-badge) -->
 
 
-#### [gh_document_gen](https://github.com/Artpupser/gh_document_gen) is web application for simplify/quickly generation GitHub documents. 🎯
+#### [gh_documents_gen](https://github.com/Artpupser/gh_documents_gen) is web application for simplify/quickly generation GitHub documents. 🎯
 
-<img src="https://github.com/Artpupser/gh_document_gen/blob/main/assets/banner.jpg" style="border-radius: 20px; max-height: 500px">
+<img src="https://github.com/Artpupser/gh_documents_gen/blob/main/assets/banner.jpg" style="border-radius: 20px; max-height: 500px">
 
 </div>
 
@@ -52,9 +52,9 @@
 ## 👀 Preview
 <div align="center">
 
-<img src="https://github.com/Artpupser/gh_document_gen/blob/main/assets/preview1.jpg" style="border-radius: 20px;">
-<img src="https://github.com/Artpupser/gh_document_gen/blob/main/assets/preview2.jpg" style="border-radius: 20px;">
-<img src="https://github.com/Artpupser/gh_document_gen/blob/main/assets/preview3.jpg" style="border-radius: 20px;">
+<img src="https://github.com/Artpupser/gh_documents_gen/blob/main/assets/preview1.jpg" style="border-radius: 20px;">
+<img src="https://github.com/Artpupser/gh_documents_gen/blob/main/assets/preview2.jpg" style="border-radius: 20px;">
+<img src="https://github.com/Artpupser/gh_documents_gen/blob/main/assets/preview3.jpg" style="border-radius: 20px;">
 
 </div>
 
