@@ -1,7 +1,7 @@
 import {Routes, Route} from "react-router-dom";
 import Home from "./pages/Home.tsx";
 import CodeOfConduct from "./pages/CodeOfConduct.tsx";
-import Header from "./components/Header.tsx";
+import Rightbar from "./components/Rightbar.tsx";
 import Footer from "./components/Footer.tsx";
 import License from "./pages/License.tsx";
 import Funding from "./pages/Funding.tsx";
@@ -11,7 +11,7 @@ const App = () => {
 
   return (
     <>
-      <Header></Header>
+      <Rightbar></Rightbar>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/gen/license" element={<License />} />

@@ -1,5 +1,5 @@
 ﻿const CodeOfConduct: (name: string, version: string | null, openSource: boolean) => string = (name: string, version: string | null, openSource: boolean):string =>  {
-  return `# Code of Conduct
+  const md : string = `# Code of Conduct
 
 ## Our Pledge
 
@@ -42,6 +42,8 @@ Instances of unacceptable behavior may be reported via GitHub Discussions. All r
 ## Attribution
 
 This Code of Conduct is adapted from the [Contributor Covenant](https://www.contributor-covenant.org/), version ${version ? version : "latest"}.`
+
+  return md;
 }
 
 export default CodeOfConduct

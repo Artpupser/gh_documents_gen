@@ -22,9 +22,13 @@ const LINKS: LinkProps[] = [
     path: `/gen/funding`,
     name: `Funding`,
   },
+  {
+    path: `/gen/contributing`,
+    name: `Contributing`,
+  },
 ]
 
-const Header = () => {
+const Rightbar = () => {
   return (
     <aside className="fixed right-0 top-0 h-screen w-64 border-l bg-white p-6 flex flex-col gap-4">
       <h2 className="text-lg font-bold">Navigation</h2>
@@ -38,4 +42,4 @@ const Header = () => {
   );
 };
 
-export default Header
+export default Rightbar

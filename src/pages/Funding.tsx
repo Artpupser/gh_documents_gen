@@ -3,6 +3,7 @@
 import {
   FaGithub,
   FaDonate,
+  FaComment,
 } from "react-icons/fa";
 
 import {
@@ -10,6 +11,7 @@ import {
   SiPatreon,
   SiOpencollective,
   SiLiberapay,
+  SiPolars,
 } from "react-icons/si";
 
 import type { IconType } from "react-icons";
@@ -58,12 +60,12 @@ const builtinProviders: BuiltinProvider[] = [
   },
   {
     name: "Polar",
-    icon: FaDonate,
+    icon: SiPolars,
     service: "polar",
   },
   {
     name: "Community Bridge",
-    icon: FaDonate,
+    icon: FaComment,
     service: "community_bridge",
   },
   {
@@ -155,7 +157,7 @@ const Funding = () => {
             </div>
           </div>
 
-          ${builtinProviders.map((item: BuiltinProvider, index: number) => {
+          {builtinProviders.map((item: BuiltinProvider, index: number) => {
             const Icon = item.icon;
             return (
             <div className="flex items-end gap-2">
