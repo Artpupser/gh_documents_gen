@@ -1,28 +1,69 @@
-name: create release
+name: Release & Deploy
+
 on:
   push:
     tags:
-      - 'v*'
-
-env:
-  PROJECT_LIB_PATH: ''
+      - "v*"
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
+
+env:
+  NODE_VERSION: 22
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix: 
-        runtime: [linux-x64, win-x64, osx-x64, osx-arm64]
 
     steps:
-      - name: "Checkout"
+      - name: Checkout
         uses: actions/checkout@v6
 
-  
-  release:
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: pnpm
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        run: pnpm build
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ./dist
+
+  deploy:
     needs: build
+
     runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  release:
+    needs: deploy
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v3
+        with:
+          generate_release_notes: true

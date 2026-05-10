@@ -7,6 +7,7 @@
 ![Tailwindcss](https://img.shields.io/badge/tailwindcss-black?style=for-the-badge&logo=tailwindcss&logoColor=white)
 ![Pnpm](https://img.shields.io/badge/pnpm-black?style=for-the-badge&logo=pnpm&logoColor=white)
 ![EsLint](https://img.shields.io/badge/eslint-black?style=for-the-badge&logo=eslint&logoColor=white)
+![GhPages](https://img.shields.io/badge/Github%20Pages-black?style=for-the-badge&logo=github&logoColor=white)
 ![License](https://img.shields.io/badge/MIT-black?style=for-the-badge)
 
 <!-- ![.NET](https://img.shields.io/badge/.NET-10.0-blue?style=for-the-badge) -->
