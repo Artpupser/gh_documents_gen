@@ -26,9 +26,17 @@ const LINKS: LinkProps[] = [
     path: `/gen/contributing`,
     name: `Contributing`,
   },
+  {
+    path: `/gen/security`,
+    name: `Security`,
+  },
+  {
+    path: `/gen/pull_request_template`,
+    name: `Pull request template`,
+  },
 ]
 
-const Rightbar = () => {
+const RightBar = () => {
   return (
     <aside className="fixed right-0 top-0 h-screen w-64 border-l bg-white p-6 flex flex-col gap-4">
       <h2 className="text-lg font-bold">Navigation</h2>
@@ -42,4 +50,4 @@ const Rightbar = () => {
   );
 };
 
-export default Rightbar
+export default RightBar

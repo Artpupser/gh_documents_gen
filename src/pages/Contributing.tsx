@@ -4,9 +4,9 @@ import Label from "../components/Label";
 import CopyButton from "../components/CopyButton";
 import DownloadButton from "../components/DownloadButton";
 
-import Contributing from "../utils/Contributing";
+import ContributingGenerator from "../utils/Contributing";
 
-const ContributingPage = () => {
+const Contributing = () => {
   const [projectName, setProjectName] = useState("");
   const [introMessage, setIntroMessage] = useState("");
   const [aboutProject, setAboutProject] = useState("");
@@ -36,7 +36,7 @@ const ContributingPage = () => {
   };
 
   const contributingText = useMemo(() => {
-    return Contributing({
+    return ContributingGenerator({
       projectName,
       introMessage,
       aboutProject,
@@ -98,7 +98,7 @@ const ContributingPage = () => {
   return (
     <div className="max-w-4xl mx-auto p-6 space-y-6">
       <h1 className="text-2xl font-bold">
-        Contributing generator
+        'CONTRIBUTING' generator
       </h1>
 
       <div className="grid gap-4">
@@ -269,4 +269,4 @@ const ContributingPage = () => {
   );
 };
 
-export default ContributingPage;
+export default Contributing;

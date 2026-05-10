@@ -44,7 +44,7 @@ const Contributing = (props: {
   md += `## Branch Naming\n\n${props.branchNaming}\n\n`;
   md += `## Contact\n\n${props.contactInfo}\n\n`;
   md += `## License\n\n`;
-  md += `This project is licensed under the ${props.licenses.map((item) => item).join(',')} License`
+  md += `This project is licensed under the ${props.licenses.map((item) => item).join(', ')} License`
   md += `\n`;
 
   return md;
