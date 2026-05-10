@@ -2,14 +2,13 @@
 
 import {
   FaGithub,
-  FaPatreon,
-  FaCoffee,
   FaDonate,
 } from "react-icons/fa";
 
 import {
-  SiOpencollective,
   SiKofi,
+  SiPatreon,
+  SiOpencollective,
   SiLiberapay,
 } from "react-icons/si";
 
@@ -29,6 +28,60 @@ type CustomProvider = {
   prefix: string;
 };
 
+type BuiltinProvider = {
+  name: string;
+  icon: IconType;
+  service: string;
+}
+
+
+const builtinProviders: BuiltinProvider[] = [
+  {
+    name: "Ko-fi",
+    icon: SiKofi,
+    service: "ko-fi",
+  },
+  {
+    name: "Patreon",
+    icon: SiPatreon,
+    service: "patreon",
+  },
+  {
+    name: "Open Collective",
+    icon: SiOpencollective,
+    service: "open_collective",
+  },
+  {
+    name: "Tidelift",
+    icon: FaDonate,
+    service: "tidelift",
+  },
+  {
+    name: "Polar",
+    icon: FaDonate,
+    service: "polar",
+  },
+  {
+    name: "Community Bridge",
+    icon: FaDonate,
+    service: "community_bridge",
+  },
+  {
+    name: "Buy Me a Coffee",
+    icon: FaDonate,
+    service: "buy_me_a_coffee",
+  },
+  {
+    name: "Liberapay",
+    icon: SiLiberapay,
+    service: "liberapay",
+  },
+  {
+    name: "Otechie",
+    icon: FaDonate,
+    service: "otechie",
+  },
+];
 const customProviders: CustomProvider[] = [
   {
     name: "DonationAlerts",
@@ -39,17 +92,9 @@ const customProviders: CustomProvider[] = [
 
 const Funding = () => {
   const [github, setGithub] = useState("");
-
-  const [patreon, setPatreon] = useState("");
-  const [openCollective, setOpenCollective] = useState("");
-  const [tidelift, setTidelift] = useState("");
-  const [koFi, setKoFi] = useState("");
-  const [polar, setPolar] = useState("");
-  const [communityBridge, setCommunityBridge] = useState("");
-  const [buyMeACoffee, setBuyMeACoffee] = useState("");
-  const [liberapay, setLiberapay] = useState("");
-  const [otechie, setOtechie] = useState("");
-
+  const [builtin, setBuiltin] = useState<[string, string][]>(
+    builtinProviders.map((item: BuiltinProvider) => [item.service,""])
+  );
   const [customValues, setCustomValues] = useState<string[]>(
     customProviders.map(() => "")
   );
@@ -72,30 +117,12 @@ const Funding = () => {
         .split(",")
         .map(x => x.trim())
         .filter(Boolean),
-
-      patreon: patreon || null,
-      open_collective: openCollective || null,
-      tidelift: tidelift || null,
-      ko_fi: koFi || null,
-      polar: polar || null,
-      community_bridge: communityBridge || null,
-      buy_me_a_coffee: buyMeACoffee || null,
-      liberapay: liberapay || null,
-      otechie: otechie || null,
-
+      builtin: builtin,
       custom,
     };
   }, [
     github,
-    patreon,
-    openCollective,
-    tidelift,
-    koFi,
-    polar,
-    communityBridge,
-    buyMeACoffee,
-    liberapay,
-    otechie,
+    builtin,
     customValues,
   ]);
 
@@ -110,7 +137,7 @@ const Funding = () => {
   return (
     <div className="max-w-4xl mx-auto p-6 space-y-6">
       <h1 className="text-2xl font-bold">
-        'Funding' Generator
+        'Funding' generator
       </h1>
 
       <div className="grid gap-4">
@@ -128,98 +155,29 @@ const Funding = () => {
             </div>
           </div>
 
-          <div className="flex items-end gap-2">
-            <FaPatreon className="w-5 h-5 mb-3 text-gray-700" />
+          ${builtinProviders.map((item: BuiltinProvider, index: number) => {
+            const Icon = item.icon;
+            return (
+            <div className="flex items-end gap-2">
+              <Icon className="w-5 h-5 mb-3 text-gray-700" />
 
-            <div className="w-full">
-              <Label
-                name="Patreon"
-                holder={placeholder}
-                getter={() => patreon}
-                setter={setPatreon}
-              />
+              <div className="w-full">
+                <Label
+                  name={item.name}
+                  holder={placeholder}
+                  getter={() => builtin[index][1]}
+                  setter={(v:string) => setBuiltin((prev) => {
+                    const updated = [...prev];
+                    updated[index][1] = v;
+                    updated[index][0] = item.service;
+                    return updated;
+                  })}
+                />
+              </div>
             </div>
-          </div>
+          )})}
 
-          <div className="flex items-end gap-2">
-            <SiOpencollective className="w-5 h-5 mb-3 text-gray-700" />
 
-            <div className="w-full">
-              <Label
-                name="Open Collective"
-                holder={placeholder}
-                getter={() => openCollective}
-                setter={setOpenCollective}
-              />
-            </div>
-          </div>
-
-          <Label
-            name="Tidelift"
-            holder={placeholder}
-            getter={() => tidelift}
-            setter={setTidelift}
-          />
-
-          <div className="flex items-end gap-2">
-            <SiKofi className="w-5 h-5 mb-3 text-gray-700" />
-
-            <div className="w-full">
-              <Label
-                name="Ko-fi"
-                holder={placeholder}
-                getter={() => koFi}
-                setter={setKoFi}
-              />
-            </div>
-          </div>
-
-          <Label
-            name="Polar"
-            holder={placeholder}
-            getter={() => polar}
-            setter={setPolar}
-          />
-
-          <Label
-            name="Community Bridge"
-            holder={placeholder}
-            getter={() => communityBridge}
-            setter={setCommunityBridge}
-          />
-
-          <div className="flex items-end gap-2">
-            <FaCoffee className="w-5 h-5 mb-3 text-gray-700" />
-
-            <div className="w-full">
-              <Label
-                name="Buy Me a Coffee"
-                holder={placeholder}
-                getter={() => buyMeACoffee}
-                setter={setBuyMeACoffee}
-              />
-            </div>
-          </div>
-
-          <div className="flex items-end gap-2">
-            <SiLiberapay className="w-5 h-5 mb-3 text-gray-700" />
-
-            <div className="w-full">
-              <Label
-                name="Liberapay"
-                holder={placeholder}
-                getter={() => liberapay}
-                setter={setLiberapay}
-              />
-            </div>
-          </div>
-
-          <Label
-            name="Otechie"
-            holder={placeholder}
-            getter={() => otechie}
-            setter={setOtechie}
-          />
         </div>
 
         <div className="space-y-3">
