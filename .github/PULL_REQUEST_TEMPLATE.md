@@ -1,59 +1,47 @@
-name: Pull Request
-description: Describe the changes and purpose of this PR
+# Pull Request
 
-body:
-  - type: textarea
-    id: description
-    attributes:
-      label: Description
-      description: What does this PR do and why?
-    validations:
-      required: true
+## Description
+What does this PR do and why?
 
-  - type: input
-    id: related_issue
-    attributes:
-      label: Related Issue
-      description: Reference the issue (e.g., Closes #123)
+<!-- Describe your changes clearly and explain the purpose -->
 
-  - type: checkboxes
-    id: type_of_change
-    attributes:
-      label: Type of Change
-      options:
-        - label: Bug fix
-        - label: New feature
-        - label: Refactoring
-        - label: Documentation update
-        - label: Security improvement
-        - label: Performance improvement
+## Related Issue
+<!-- Reference the issue (e.g., Closes #123) -->
 
-  - type: checkboxes
-    id: testing
-    attributes:
-      label: How Has This Been Tested?
-      options:
-        - label: Linux
-        - label: Windows
-        - label: macOS
+Closes #
 
-  - type: textarea
-    id: test_commands
-    attributes:
-      label: Commands used to test
-      render: bash
+## Type of Change
+<!-- Select all that apply -->
 
-  - type: checkboxes
-    id: checklist
-    attributes:
-      label: Checklist
-      options:
-        - label: Code follows the project's style guidelines
-        - label: README updated if needed
-        - label: No new security vulnerabilities introduced
+- [ ] Bug fix
+- [ ] New feature
+- [ ] Refactoring
+- [ ] Documentation update
+- [ ] Security improvement
+- [ ] Performance improvement
 
-  - type: textarea
-    id: screenshots
-    attributes:
-      label: Screenshots / Output
-      description: Attach terminal output or before/after screenshots
+## How Has This Been Tested?
+<!-- Select all platforms you tested on -->
+
+- [ ] Linux
+- [ ] Windows
+- [ ] macOS
+
+## Commands Used to Test
+<!-- Paste the commands you used to test -->
+
+```bash
+# Your test commands here
+```
+
+## Checklist
+<!-- Ensure all items are checked before merging -->
+
+- [ ] Code follows the project's style guidelines
+- [ ] README updated if needed
+- [ ] No new security vulnerabilities introduced
+
+## Screenshots / Output
+<!-- Attach terminal output or before/after screenshots -->
+
+<!-- Paste screenshots here -->
