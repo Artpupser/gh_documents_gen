@@ -167,7 +167,7 @@ body:
           <CopyButton content={bugReport}/>
 
           <DownloadButton
-            name={"PULL_REQUEST_TEMPLATE.yml"}
+            name={"bug_report"}
             extension={"yml"}
             content_in_file={bugReport}
           />
@@ -187,7 +187,7 @@ body:
           <CopyButton content={featureReport}/>
 
           <DownloadButton
-            name={"PULL_REQUEST_TEMPLATE.yml"}
+            name={"feature_request"}
             extension={"yml"}
             content_in_file={featureReport}
           />

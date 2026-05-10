@@ -69,6 +69,10 @@
 
 ## 🗃️ Devlog
 
+### 0.1.0
+- fix: problem with base path routing
+- fix: render image on home page
+
 ### 0.0.1
 - current: ru lang support
 - add: contributing, license (mit, apache, gpl), code of conduct, funding, issue template, pull request template, security documents generator and pages

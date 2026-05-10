@@ -23,7 +23,7 @@
           <div className="absolute inset-0 bg-gray-200 rounded-3xl blur-3xl opacity-40"/>
 
           <img
-            src="/favicon.png"
+            src={`${import.meta.env.BASE_URL}/favicon.png`}
             alt="Developer workspace"
             className="relative rounded-3xl  object-cover w-full h-[500px]"
           />
