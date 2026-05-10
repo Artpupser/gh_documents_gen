@@ -11,7 +11,7 @@
 ![License](https://img.shields.io/badge/MIT-black?style=for-the-badge)
 
 <!-- ![.NET](https://img.shields.io/badge/.NET-10.0-blue?style=for-the-badge) -->
-<!-- ![.Version](https://img.shields.io/github/v/release/Artpupser/PassGen?style=for-the-badge) -->
+<!-- ![.Version](https://img.shields.io/github/v/release/Artpupser/gh_documents_gen?style=for-the-badge) -->
 
 
 #### [gh_documents_gen](https://github.com/Artpupser/gh_documents_gen) is web application for simplify/quickly generation GitHub documents. 🎯

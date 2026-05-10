@@ -2,7 +2,7 @@
 
 ## Our Pledge
 
-We, as contributors and maintainers of **PassGen**, pledge to make participation in our project a harassment-free experience for everyone — regardless of age, experience level, nationality, gender, sexual orientation, religion, or any other characteristic.
+We, as contributors and maintainers of **gh_documents_gen**, pledge to make participation in our project a harassment-free experience for everyone — regardless of age, experience level, nationality, gender, sexual orientation, religion, or any other characteristic.
 
 ---
 
