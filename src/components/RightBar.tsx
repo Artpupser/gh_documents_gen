@@ -34,6 +34,10 @@ const LINKS: LinkProps[] = [
     path: `/gen/pull_request_template`,
     name: `Pull request template`,
   },
+  {
+    path: `/gen/issue_template`,
+    name: `Issue template`,
+  },
 ]
 
 const RightBar = () => {

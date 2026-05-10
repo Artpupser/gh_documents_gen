@@ -8,6 +8,7 @@ import Funding from "./pages/Funding.tsx";
 import Contributing from "./pages/Contributing.tsx";
 import Security from "./pages/Security.tsx";
 import PullRequestTemplate from "./pages/PullRequestTemplate.tsx";
+import IssueTemplate from "./pages/IssueTemplate.tsx";
 
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
         <Route path="/gen/contributing" element={<Contributing />} />
         <Route path="/gen/security" element={<Security />} />
         <Route path="/gen/pull_request_template" element={<PullRequestTemplate />} />
+        <Route path="/gen/issue_template" element={<IssueTemplate />} />
       </Routes>
       <Footer></Footer>
     </>
