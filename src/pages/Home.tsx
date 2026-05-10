@@ -3,7 +3,8 @@
     <div className="h-[calc(100dvh-53px)] justify-center max-w-6xl mx-auto px-6 py-20">
       <div className="grid lg:grid-cols-2 justify-center gap-16 items-center">
         <div className="space-y-6 justify-center">
-          <div className="inline-flex items-center rounded-full border px-3 py-1 text-sm text-gray-600">
+          <div
+            className="inline-flex items-center rounded-full border px-3 py-1 text-sm text-gray-600">
             Open Source Toolkit
           </div>
 
@@ -19,7 +20,7 @@
         </div>
 
         <div className="relative">
-          <div className="absolute inset-0 bg-gray-200 rounded-3xl blur-3xl opacity-40" />
+          <div className="absolute inset-0 bg-gray-200 rounded-3xl blur-3xl opacity-40"/>
 
           <img
             src="/favicon.png"

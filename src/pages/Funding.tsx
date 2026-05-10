@@ -1,4 +1,4 @@
-﻿import { useMemo, useState } from "react";
+﻿import {useMemo, useState} from "react";
 
 import {
   FaGithub,
@@ -14,7 +14,7 @@ import {
   SiPolars,
 } from "react-icons/si";
 
-import type { IconType } from "react-icons";
+import type {IconType} from "react-icons";
 
 import Label from "../components/Label";
 import CopyButton from "../components/CopyButton";
@@ -95,7 +95,7 @@ const customProviders: CustomProvider[] = [
 const Funding = () => {
   const [github, setGithub] = useState("");
   const [builtin, setBuiltin] = useState<[string, string][]>(
-    builtinProviders.map((item: BuiltinProvider) => [item.service,""])
+    builtinProviders.map((item: BuiltinProvider) => [item.service, ""])
   );
   const [customValues, setCustomValues] = useState<string[]>(
     customProviders.map(() => "")
@@ -145,7 +145,7 @@ const Funding = () => {
       <div className="grid gap-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           <div className="flex items-end gap-2">
-            <FaGithub className="w-5 h-5 mb-3 text-gray-700" />
+            <FaGithub className="w-5 h-5 mb-3 text-gray-700"/>
 
             <div className="w-full">
               <Label
@@ -160,24 +160,25 @@ const Funding = () => {
           {builtinProviders.map((item: BuiltinProvider, index: number) => {
             const Icon = item.icon;
             return (
-            <div className="flex items-end gap-2">
-              <Icon className="w-5 h-5 mb-3 text-gray-700" />
+              <div className="flex items-end gap-2">
+                <Icon className="w-5 h-5 mb-3 text-gray-700"/>
 
-              <div className="w-full">
-                <Label
-                  name={item.name}
-                  holder={placeholder}
-                  getter={() => builtin[index][1]}
-                  setter={(v:string) => setBuiltin((prev) => {
-                    const updated = [...prev];
-                    updated[index][1] = v;
-                    updated[index][0] = item.service;
-                    return updated;
-                  })}
-                />
+                <div className="w-full">
+                  <Label
+                    name={item.name}
+                    holder={placeholder}
+                    getter={() => builtin[index][1]}
+                    setter={(v: string) => setBuiltin((prev) => {
+                      const updated = [...prev];
+                      updated[index][1] = v;
+                      updated[index][0] = item.service;
+                      return updated;
+                    })}
+                  />
+                </div>
               </div>
-            </div>
-          )})}
+            )
+          })}
 
 
         </div>
@@ -195,7 +196,7 @@ const Funding = () => {
                 key={provider.name}
                 className="flex items-end gap-2"
               >
-                <Icon className="w-5 h-5 mb-3 text-gray-700" />
+                <Icon className="w-5 h-5 mb-3 text-gray-700"/>
 
                 <div className="w-full">
                   <Label
@@ -217,7 +218,7 @@ const Funding = () => {
         </div>
 
         <div className="flex flex-row gap-2">
-          <CopyButton content={fundingText} />
+          <CopyButton content={fundingText}/>
 
           <DownloadButton
             name={"FUNDING"}

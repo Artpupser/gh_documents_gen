@@ -12,7 +12,7 @@ const DownloadButton = (props: {
     try {
       const blob = new Blob(
         [props.content_in_file],
-        { type: "text/plain;charset=utf-8" }
+        {type: "text/plain;charset=utf-8"}
       );
 
       const url = URL.createObjectURL(blob);

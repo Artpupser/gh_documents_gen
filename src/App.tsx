@@ -17,14 +17,14 @@ const App = () => {
     <>
       <RightBar></RightBar>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/gen/license" element={<License />} />
-        <Route path="/gen/code_of_conduct" element={<CodeOfConduct />} />
-        <Route path="/gen/funding" element={<Funding />} />
-        <Route path="/gen/contributing" element={<Contributing />} />
-        <Route path="/gen/security" element={<Security />} />
-        <Route path="/gen/pull_request_template" element={<PullRequestTemplate />} />
-        <Route path="/gen/issue_template" element={<IssueTemplate />} />
+        <Route path="/" element={<Home/>}/>
+        <Route path="/gen/license" element={<License/>}/>
+        <Route path="/gen/code_of_conduct" element={<CodeOfConduct/>}/>
+        <Route path="/gen/funding" element={<Funding/>}/>
+        <Route path="/gen/contributing" element={<Contributing/>}/>
+        <Route path="/gen/security" element={<Security/>}/>
+        <Route path="/gen/pull_request_template" element={<PullRequestTemplate/>}/>
+        <Route path="/gen/issue_template" element={<IssueTemplate/>}/>
       </Routes>
       <Footer></Footer>
     </>

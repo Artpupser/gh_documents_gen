@@ -20,7 +20,7 @@
       </label>
     )
   }
-  return(
+  return (
     <label className="flex flex-col gap-1">
       <span>{props.name}</span>
       <input
@@ -32,7 +32,6 @@
     </label>
   )
 }
-
 
 
 export default Label;

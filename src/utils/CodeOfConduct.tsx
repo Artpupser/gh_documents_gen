@@ -1,5 +1,5 @@
-﻿const CodeOfConduct: (name: string, version: string | null, openSource: boolean) => string = (name: string, version: string | null, openSource: boolean):string =>  {
-  const md : string = `# Code of Conduct
+﻿const CodeOfConduct: (name: string, version: string | null, openSource: boolean) => string = (name: string, version: string | null, openSource: boolean): string => {
+  const md: string = `# Code of Conduct
 
 ## Our Pledge
 

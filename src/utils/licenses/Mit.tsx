@@ -1,4 +1,4 @@
-﻿const Mit: (year: string, author: string) => string = (year:string, author: string):string => {
+﻿const Mit: (year: string, author: string) => string = (year: string, author: string): string => {
   return `MIT License
 
 Copyright (c) ${year} ${author}

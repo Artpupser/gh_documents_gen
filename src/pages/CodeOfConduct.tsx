@@ -1,4 +1,4 @@
-﻿import { useMemo, useState } from "react";
+﻿import {useMemo, useState} from "react";
 import CodeOfConductGenerator from "../utils/CodeOfConduct";
 import Label from "../components/Label.tsx";
 import Checkbox from "../components/Checkbox.tsx";
@@ -23,27 +23,27 @@ const CodeOfConduct = () => {
 
       <div className="grid gap-4">
         <div className="grid grid-rows-1 grid-cols-2 gap-1">
-        <Label
-          name="Project name"
-          holder="Project name"
-          getter={() => name}
-          setter={setName} />
-        <Label
-          name="Version (optional, default='latest')"
-          holder="1.x.x"
-          getter={() => version}
-          setter={setVersion} />
+          <Label
+            name="Project name"
+            holder="Project name"
+            getter={() => name}
+            setter={setName}/>
+          <Label
+            name="Version (optional, default='latest')"
+            holder="1.x.x"
+            getter={() => version}
+            setter={setVersion}/>
         </div>
 
-        <Checkbox name='Open source project' getter={() => openSource} setter={setOpenSource} />
+        <Checkbox name='Open source project' getter={() => openSource} setter={setOpenSource}/>
 
         <div className="flex flex-row gap-1">
-          <CopyButton content={result} />
-          <DownloadButton name={"CODE_OF_CONDUCT"} extension={"md"} content_in_file={result} />
+          <CopyButton content={result}/>
+          <DownloadButton name={"CODE_OF_CONDUCT"} extension={"md"} content_in_file={result}/>
         </div>
       </div>
 
-       <pre className="whitespace-pre-wrap bg-gray-100 p-4 rounded-md border">
+      <pre className="whitespace-pre-wrap bg-gray-100 p-4 rounded-md border">
         {result}
       </pre>
     </div>

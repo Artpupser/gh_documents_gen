@@ -3,7 +3,7 @@
   getter: () => boolean;
   setter: (value: boolean) => void;
 }) => {
-  return(
+  return (
     <label className="flex items-center gap-2">
       <input
         type="checkbox"

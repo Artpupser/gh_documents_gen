@@ -1,4 +1,4 @@
-﻿import { useMemo, useState } from "react";
+﻿import {useMemo, useState} from "react";
 
 import Label from "../components/Label";
 import CopyButton from "../components/CopyButton";
@@ -252,7 +252,7 @@ const Contributing = () => {
         </div>
 
         <div className="flex flex-row gap-2">
-          <CopyButton content={contributingText} />
+          <CopyButton content={contributingText}/>
 
           <DownloadButton
             name={"CONTRIBUTING"}

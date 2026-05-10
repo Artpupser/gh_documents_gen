@@ -1,11 +1,10 @@
-﻿
-const Contributing = (props: {
+﻿const Contributing = (props: {
   projectName: string;
   introMessage: string;
   aboutProject: string;
   howToContribute: string[];
   codeOfConductUrl?: string;
-  issueTypes?: Array<{name: string; template: string}>;
+  issueTypes?: Array<{ name: string; template: string }>;
   pullRequestGuidelines: string[];
   codingStandards: string;
   testingInstructions: string;

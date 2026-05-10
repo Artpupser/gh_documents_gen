@@ -1,4 +1,4 @@
-﻿const Apache = (year:string):string => {
+﻿const Apache = (year: string): string => {
   return `                                 Apache License
                                 Version 2.0, ${year}
                         http://www.apache.org/licenses/

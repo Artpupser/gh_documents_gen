@@ -47,7 +47,8 @@ const RightBar = () => {
 
       <nav className="flex flex-col gap-3 text-sm">
         {LINKS.map((link) => (
-          <Link key={link.path} to={link.path} className="hover:bg-gray-100 px-3 py-2 rounded-md transition">{link.name}</Link>
+          <Link key={link.path} to={link.path}
+                className="hover:bg-gray-100 px-3 py-2 rounded-md transition">{link.name}</Link>
         ))}
       </nav>
     </aside>

@@ -19,7 +19,8 @@ const CopyButton = (props: {
     <Button onclick={copy} state={() => {
       return copied
         ? "Скопировано! ✅"
-        : "Скопировать"}}/>
+        : "Скопировать"
+    }}/>
   )
 }
 

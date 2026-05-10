@@ -3,7 +3,7 @@ import DownloadButton from "../components/DownloadButton.tsx";
 
 const IssueTemplate = () => {
 
-  const bugReport:string = `name: Bug Report
+  const bugReport: string = `name: Bug Report
 description: Report a bug to help us improve
 title: "[BUG]: "
 labels: ["bug"]
@@ -164,7 +164,7 @@ body:
       <div className="grid gap-4">
 
         <div className="flex flex-row gap-2">
-          <CopyButton content={bugReport} />
+          <CopyButton content={bugReport}/>
 
           <DownloadButton
             name={"PULL_REQUEST_TEMPLATE.yml"}
@@ -184,7 +184,7 @@ body:
       <div className="grid gap-4">
 
         <div className="flex flex-row gap-2">
-          <CopyButton content={featureReport} />
+          <CopyButton content={featureReport}/>
 
           <DownloadButton
             name={"PULL_REQUEST_TEMPLATE.yml"}

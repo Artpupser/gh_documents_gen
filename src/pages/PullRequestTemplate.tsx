@@ -2,7 +2,7 @@
 import DownloadButton from "../components/DownloadButton.tsx";
 
 const PullRequestTemplate = () => {
-  const template:string = `
+  const template: string = `
   name: Pull Request
 description: Describe the changes and purpose of this PR
 
@@ -72,7 +72,7 @@ body:
       <div className="grid gap-4">
 
         <div className="flex flex-row gap-2">
-          <CopyButton content={template} />
+          <CopyButton content={template}/>
 
           <DownloadButton
             name={"PULL_REQUEST_TEMPLATE.yml"}

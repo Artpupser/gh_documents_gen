@@ -1,4 +1,4 @@
-﻿import { useMemo, useState } from "react";
+﻿import {useMemo, useState} from "react";
 
 import Mit from "../utils/licenses/Mit";
 import Apache from "../utils/licenses/Apache";
@@ -23,17 +23,17 @@ const LICENSES: LicenseItem[] = [
   {
     id: "mit",
     name: "MIT License",
-    generate: ({ year, holder }) => Mit(year, holder),
+    generate: ({year, holder}) => Mit(year, holder),
   },
   {
     id: "apache",
     name: "Apache License 2.0",
-    generate: ({ year }) => Apache(year),
+    generate: ({year}) => Apache(year),
   },
   {
     id: "gpl",
     name: "GNU GPL v3",
-    generate: ({ year }) => GnuGpl3(year),
+    generate: ({year}) => GnuGpl3(year),
   },
 ];
 
@@ -72,7 +72,8 @@ const License = () => {
         <h2 className="text-lg font-semibold">Licenses</h2>
 
         {LICENSES.map((l) => (
-          <Checkbox name={l.name} getter={() => selected.includes(l.id)} setter={() => toggle(l.id)} />
+          <Checkbox name={l.name} getter={() => selected.includes(l.id)}
+                    setter={() => toggle(l.id)}/>
         ))}
       </div>
 

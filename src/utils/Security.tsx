@@ -1,11 +1,11 @@
-﻿const supportMark = (mark: boolean):string => {
+﻿const supportMark = (mark: boolean): string => {
   return mark ? `✅` : '❌';
 }
 
 const Security = (props: {
   versions: [string, boolean][];
   responseTime: string;
-}):string => {
+}): string => {
   return `## Supported Versions
 Only the latest version of this project is supported with security updates.
 
