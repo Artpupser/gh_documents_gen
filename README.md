@@ -69,6 +69,9 @@
 
 ## 🗃️ Devlog
 
+### 0.1.1
+- fix: Code of conduct remove version
+
 ### 0.1.0
 - fix: problem with base path routing
 - fix: render image on home page
